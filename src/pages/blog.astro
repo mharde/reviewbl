@@ -1,9 +1,9 @@
 
 ---
-import Navigation from '../components/navigation.astro';
+import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import '../styles/global.css';
-const pageTitle = "Reviews";
+const pageTitle = "List of Reviews";
 ---
 
 <html lang="en">
@@ -15,14 +15,17 @@ const pageTitle = "Reviews";
 		<title>Astro</title>
 	</head>
   <body>
-      <Navigation />
+      <Header />
       
-      <h1>My Review Blog</h1>
-      <h1>{pageTitle}</h1>
+      <h1>Reviews By Maggie</h1>
+      <h2>{pageTitle}</h2>
       <p>This is where I will post about my journey reviewing books.</p>
       <ul>
         <li><a href="/posts/post-1">First Post!</a></li>
       </ul>
       <Footer />
+      <script>
+        import "../scripts/menu";
+      </script>
     </body>
   </html>
