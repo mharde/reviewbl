@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My First Post'
-pubDate: 2024-Dec-05
+pubDate: 5-Dec-2024
 description: 'This is the first post using Astro.'
 author: 'Maggie'
 image:
@@ -8,10 +9,6 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Post
-
-Published on: 2024-Dec-05
-
 Welcome to my _new review blog_ using Astro! 
 
 ## What I've done so far

@@ -1,25 +1,7 @@
 ---
-import Header from '../components/header.astro';
-import Footer from '../components/footer.astro';
-import '../styles/global.css';
-const pageTitle = "Home";
+import BaseLayout from '../layouts/baselayout.astro';
+const pageTitle = "Home Page";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Reviews by Maggie</title>
-	</head>
-	<body>
-		<Header />
-		<h1>Reviews By Maggie</h1>
-		<h2>{pageTitle}</h2>
-		<Footer />
-		<script>
-			import "../scripts/menu";
-		</script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>sharing self-induced book reports to catalog what i've read</h2>
+</BaseLayout>

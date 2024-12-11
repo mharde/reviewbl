@@ -1,11 +1,9 @@
 ---
-import Footer from '../components/footer.astro';
-import '../styles/global.css';
-import Header from '../components/header.astro';
+import Baselayout from '../layouts/baselayout.astro';
 const pageTitle = "About Me";
 const identity = {
   firstName: "Maggie",
-  country: "USA",
+  country: "North America",
   occupation: "Technical Writer",
   hobbies: ["reading", "gaming", "hiking"],
 };
@@ -21,27 +19,15 @@ const fontWeight = "bold";
 const textCase = "lowercase";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<style define:vars={{skillColor, fontWeight, textCase}}>			
+<Baselayout pageTitle={pageTitle}>
+	<body>
+        <style define:vars={{skillColor, fontWeight, textCase}}>			
 			.skill {
 				color: var(--skillColor);
 				font-weight: var(--fontWeight);
 				text-transform: var(--textCase);
 			}
 		</style>
-	</head>
-	<body>
-        <Header />
-		<h1>Reviews by Maggie</h1>
-        <h1>{pageTitle}</h1>
-        <h2>... and my new review site!</h2>
-
         <p>Note: I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself! This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
 		<p>Here are a few facts about me:</p>
 		<ul>
@@ -59,9 +45,5 @@ const textCase = "lowercase";
 		{happy && <p>I am happy to be learning Astro to make this review blog!</p>}
 		{finished && <p>I finished this tutorial!</p>}
 		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}    
-		<Footer /> 
-		<script>
-			import "../scripts/menu";
-		</script>
 	</body>
-</html>
+</Baselayout>
